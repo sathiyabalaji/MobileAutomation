@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+<listener class-name="com.mobileAutomation.ExtentListeners1"></listener>
+<!-- <listener class-name="TestNG.Transform"></listener> -->
+</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.mobileAutomation.MobileAutomation">
+      <methods>
+        <exclude name="launchApp" />
+        <exclude name="saveData" />
+        <exclude name="CloseApp" />
+        <exclude name="launchBrowser" />
+      </methods>
+      </class>
+      <class name="com.mobileAutomation.MobileEmulatorAutomation">
+      <methods>
+        <include name="launchApp" />
+        <exclude name="saveData" />
+        <include name="CloseApp" />
+        </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

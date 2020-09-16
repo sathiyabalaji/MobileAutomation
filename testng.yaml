@@ -1,0 +1,19 @@
+name: Suite
+configFailurePolicy: skip
+listeners:
+  - com.mobileAutomation.ExtentListeners1
+tests:
+  - name: Test
+  classes:
+    - name: com.mobileAutomation.MobileAutomation
+      excludedMethods:
+        - launchApp
+        - saveData
+        - CloseApp
+        - launchBrowser
+    - name: com.mobileAutomation.MobileEmulatorAutomation
+      includedMethods:
+        - name: launchApp
+        - name: saveData
+        - name: CloseApp
+

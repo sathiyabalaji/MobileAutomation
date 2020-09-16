@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Mail" verbose="5" parallel="tests">
+<listeners>
+<listener class-name="com.mobileAutomation.ExtentListeners"></listener>
+<!-- <listener class-name="TestNG.Transform"></listener> -->
+</listeners>
+ 
+<!-- Author Ganesh -->
+<test name="Test Mail">
+<parameter name="browser" value="chrome"></parameter>
+
+<!-- <groups>
+<run>
+<include name="Functional"></include>
+</run>
+</groups>
+ -->
+
+<classes>
+<class name="com.mobileAutomation.MobileAutomation"></class>
+<!--  class name="TestNG.Yahoo"></class> -->
+</classes>
+</test>
+</suite>
